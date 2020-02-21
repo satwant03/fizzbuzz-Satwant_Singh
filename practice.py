@@ -61,3 +61,20 @@ def character_word_count():
             a[data]+=1
     print(a)
 character_word_count()
+
+def start_with_vow():
+    a=0
+    fin = open("Book1.txt",'r')
+    wrd = fin.read()
+    fiss = open("Book2.txt",'r')
+    lo = fiss.read()
+    mega = open("20k.txt",'r')
+    ka = mega.read()
+    ans =(wrd + lo + ka)
+    jng = ans.split()
+    for data in jng:
+        if data[0] == "a" or "e" or "i" or "u":
+            a+=1
+    print(a)
+
+start_with_vow()
