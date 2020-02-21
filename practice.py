@@ -29,3 +29,17 @@ def count_the_article():
     return a
 
 print(count_the_article())
+
+def sorted_words():
+    fin = open("Book1.txt",'r')
+    wrd = fin.read()
+    fiss = open("Book2.txt",'r')
+    lo = fiss.read()
+    mega = open("20k.txt",'r')
+    ka = mega.read()
+    ans =(wrd + lo + ka)
+    jng = ans.split()
+    jng.sort(key=len)
+    print(jng)
+
+sorted_words()
