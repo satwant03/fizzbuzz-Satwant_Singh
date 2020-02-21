@@ -43,3 +43,21 @@ def sorted_words():
     print(jng)
 
 sorted_words()
+
+def character_word_count():
+    a={}
+    fin = open("Book1.txt",'r')
+    wrd = fin.read()
+    fiss = open("Book2.txt",'r')
+    lo = fiss.read()
+    mega = open("20k.txt",'r')
+    ka = mega.read()
+    ans =(wrd + lo + ka)
+    jng = ans.split()
+    for data in jng:
+        if data not in a:
+            a[data] = 1
+        else:
+            a[data]+=1
+    print(a)
+character_word_count()
